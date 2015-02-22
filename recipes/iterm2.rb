@@ -7,8 +7,9 @@ directory "#{Chef::Config[:file_cache_path]}/iterm2" do
   action :create
 end
 
-cookbook_file "iterm2/TomorrowNightEighties.itermcolors" do
+cookbook_file "TomorrowNightEighties.itermcolors" do
   path "#{Chef::Config[:file_cache_path]}/iterm2/TomorrowNightEighties.itermcolors"
+  source "iterm2/TomorrowNightEighties.itermcolors"
   action :create_if_missing
 end
 

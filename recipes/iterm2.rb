@@ -2,6 +2,11 @@
 
 homebrewalt_cask "iterm2"
 
+directory "#{Chef::Config[:file_cache_path]}/iterm2" do
+  owner node['current_user']
+  action :create
+end
+
 cookbook_file "iterm2/TomorrowNightEighties.itermcolors" do
   path "#{Chef::Config[:file_cache_path]}/iterm2/TomorrowNightEighties.itermcolors"
   action :create_if_missing
